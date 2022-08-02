@@ -1,0 +1,3 @@
+# Arrays_Questions
+These are some basic questions of array they might help you in preparing for your placement journey....
+So enjoy!!!!
