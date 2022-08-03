@@ -1,0 +1,48 @@
+// brute force solution 
+// by using for loop 
+// time complexity -O(n)
+// space conplexity- O(1)
+
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        System.out.print("Enter the values of n:");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int arr[]=new int[n];
+        int sum=0;
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+            
+        }    
+             for(int j=0;j<n;j++){
+                 sum+=arr[j];
+                
+             }
+         System.out.println("sum of all the elements is :"+sum);
+        
+    }
+}
+//  method-II 
+// use of IntStream sum() method
+// time complexity is -O(n)
+// space compleexity is -O(1)
+
+import java.util.*;
+import java.util.stream.IntStream;
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.print("Enter the values of n:");
+	    Scanner sc=new Scanner(System.in);
+	    int n=sc.nextInt();
+	 int arr[]=new int[n];
+	 for(int i=0;i<n;i++){
+	     arr[i]=sc.nextInt();
+	 }
+	int SumOfElements=IntStream.of(arr).sum();
+	System.out.println("sum is :"+SumOfElements);
+	}
+	
+}
+
