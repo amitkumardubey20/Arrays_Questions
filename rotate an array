@@ -1,0 +1,44 @@
+// rotation of an array by k elements
+// by using block swap algorithm
+// time complexity-O(n)
+// space complexity-O(1)
+
+public class Main{
+    public static void main(String args[]){
+        int arr[]={1,2,3,4,5};
+        int k=2;
+        int n=5;
+        blockSwap(arr,0,k,n);
+        for(int i=0;i<n;i++){
+            System.out.println(arr[i]);
+        }
+        
+    }
+    static void blockSwap(int arr[],int i,int k,int n){
+        if(k==0 && k==n){
+            return;
+        }
+        if(k==n-k){
+            swap(arr,i,n-k+i,k);
+            return;
+        }
+        else if(k<n-k){
+            swap(arr,i,n-k+i,k);
+            blockSwap(arr,i,k,n-k);
+        }
+        else{
+            swap(arr,i,k,n-k);
+            blockSwap(arr,n-k+i,2*k-n,k);
+        }
+    }
+    
+    static void swap(int arr[],int a,int b,int k){
+        for(int i=0;i<k;i++){
+            int temp=arr[a+i];
+            arr[a+i]=arr[b+i];
+            arr[b+i]=temp;
+        }
+        
+    }
+    
+}
