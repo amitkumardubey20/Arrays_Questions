@@ -1,0 +1,24 @@
+// time complexity-O(n)
+// space complexity-O(1)
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+      System.out.print("Enter the no of elements:");
+      Scanner sc=new Scanner(System.in);
+      int n=sc.nextInt();
+      int arr[]=new int [n];
+      for(int i=0;i<n;i++){
+          arr[i]=sc.nextInt();
+      }
+        
+        
+        double avg=0;
+        double sum=0;
+        for(int j=0;j<arr.length;j++){
+            sum+=(double)arr[j];
+            
+        }
+        avg=sum/arr.length;
+        System.out.print("avg is :"+avg);
+    }
+}
